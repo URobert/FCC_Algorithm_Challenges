@@ -1,0 +1,47 @@
+function permAlone(str) { 
+ // Using HEAP's algorithm to get the list of all no reps possible permutations - PART 1
+  var arr = (str + '').split(''), permutations = [];  //variables for part1
+  var ok = 1; var word=""; var goodCombos =[];  //variables for part2
+  
+  function swap(a, b) {
+    var tmp = arr[a];
+    arr[a] = arr[b];
+    arr[b] = tmp;
+  }
+
+  function generate(n) {
+    if (n == 1) {
+      permutations.push(arr.join(""));
+    } else {
+      for (var i = 0; i != n; ++i) {
+        generate(n - 1);
+        swap(n % 2 ? 0 : i, n - 1);
+      }
+    }
+  }
+
+  generate(arr.length);
+  // at this point the above code stores in the array permutations all possible permutations of str
+  
+
+  // PART 2
+  for (var j=0; j < permutations.length ; j++){
+  	word = permutations[j].split(""); // splitting each string combo into letters
+      for (var x = 0; x < word.length-1; x++){
+          if (word[x] !== word[x+1]){ //check if picked letter is different from next in line
+            ok *= 1;                  //different consecutive letters => reinforce posibility of good Combo
+          }else{
+            ok *= 0;                  //when two consecutive letters are the same, the current permutation is discarded
+          }
+      }
+      if (ok){
+      	goodCombos.push(word);       //pusing the confirmed correct permutation to goodCombos
+      }
+      ok = 1;  //resting the value of ok - the check variable
+  } 
+  return goodCombos.length;
+}
+
+permAlone("aab"); 
+
+
