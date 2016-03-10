@@ -1,0 +1,37 @@
+function pairwise(arr, arg) {
+  var i,j,sum=0; 
+  var confirmedIndexes=[], solution = 0;
+  
+  if(arr.length <= 0){
+    return 0;
+  }else{
+  
+  for (i = 0 ; i < arr.length; i++){
+  	for (j=i+1; j <= arr.length; j++){
+    	sum = arr[i]+arr[j];
+      if (sum === arg){
+          confirmedIndexes.push(arr.indexOf(arr[i]));
+          if (arr[i]===arr[j]){ //condition introduced to fix result for consecutive identical values
+          confirmedIndexes.push(arr.indexOf(arr[j])+1);
+          }else{
+          confirmedIndexes.push(arr.indexOf(arr[j]));
+          }
+          arr[i]=NaN;//prevent reuse of index
+          arr[j]=NaN;//prevent reuse of index
+      }
+    }
+  }// check all combo of two elements and if combo === arg push these indexes to confirmedIndexes array
+console.log(confirmedIndexes);
+
+solution = confirmedIndexes.reduce(function (a,b) {
+return a + b;
+}); // add up all the elements from confirmedIndexes and store them in solution
+
+console.log(solution);
+
+  return solution;
+  }
+}
+
+//pairwise([1, 4, 2, 3, 0, 5], 7);
+pairwise([0, 0, 0, 0, 1, 1], 1);
