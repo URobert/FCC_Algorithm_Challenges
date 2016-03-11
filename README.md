@@ -5,3 +5,4 @@
 4) No repeats  please  
 5) Exact Change  
 6) Paiwise  
+7) Sum All Numbers in a Range  
