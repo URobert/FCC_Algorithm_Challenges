@@ -1,0 +1,15 @@
+function sumAll(arr) {
+  var sortedA = arr.sort(function(a, b){return a-b;});
+  var last_elem = sortedA[sortedA.length -1];
+   console.log(last_elem);
+  var sum = 0;
+  for( var i = sortedA[0] ; i <= last_elem ; i++){
+    console.log(i);
+    sum = sum+i;
+  }
+  
+  return sum;
+}
+
+sumAll([5, 10]);
+
