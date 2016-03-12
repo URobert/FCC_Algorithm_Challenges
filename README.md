@@ -6,3 +6,4 @@
 5) Exact Change  
 6) Paiwise  
 7) Sum All Numbers in a Range  
+8) Diff of two arrays  
