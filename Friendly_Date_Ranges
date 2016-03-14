@@ -9,51 +9,51 @@ function friendly(arr) {
   //getting time differential
   var date1 = new Date(arr[0]);
   var date2 = new Date(arr[1]);
-  var timeDiff = Math.abs(date2.getTime() - date1.getTime());
-  var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+  var timeDiff = Math.abs(date2.getTime() - date1.getTime()); //milliseconds 
+  var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));  //result in days
   
 function convertMonth (month){
-      switch(month){
-            case "01":
-            month = "January";
-            break;
-            case "02":
-            month = "February";
-            break;
-            case "03":
-            month = "March";
-            break;
-            case "04":
-            month = "April";
-            break;
-            case "05":
-            month = "May";
-            break;
-            case "06":
-            month = "June";
-            break;
-            case "07":
-            month = "July";
-            break;
-            case "08":
-            month = "August";
-            break;
-            case "09":
-            month = "September";
-            break;
-            case "10":
-            month = "October";
-            break;
-            case "11":
-            month = "November";
-            break;
-            case "12":
-            month = "December";
-            break;
-            default:
-
-            break;
-      }
+		switch(month){
+    case "01":
+    month = "January";
+    break;
+    case "02":
+	month = "February";
+    break;
+    case "03":
+    month = "March";
+    break;
+    case "04":
+    month = "April";
+    break;
+    case "05":
+    month = "May";
+    break;
+    case "06":
+    month = "June";
+    break;
+    case "07":
+    month = "July";
+    break;
+    case "08":
+    month = "August";
+    break;
+    case "09":
+    month = "September";
+    break;
+    case "10":
+    month = "October";
+    break;
+    case "11":
+    month = "November";
+    break;
+    case "12":
+    month = "December";
+    break;
+    default:
+    
+    break;
+    }
     return month;
 }  
   
@@ -61,7 +61,7 @@ function convertMonth (month){
 function convertDay (day){
 
 if (day.charAt(0) === "0"){
-  day = day.substring(1);
+  day = day.substring(1); //to avoid adding different conditions for 01 -> 09 day format
 }
 
 if (day === "11" || day === "12" || day === "13"){
@@ -87,7 +87,7 @@ if (day === "11" || day === "12" || day === "13"){
     result.push(convertDay(endDay));
   }else if (diffDays < 365 && startYear === endYear){
 
-     result.push(convertMonth(startMonth)+" "+convertDay(startDay)+ ","+ " " +startYear);
+    result.push(convertMonth(startMonth)+" "+convertDay(startDay)+ ","+ " " +startYear);
     result.push(convertMonth(endMonth)+" "+convertDay(endDay));
    }else if (diffDays < 365 && startMonth === endMonth){
 
@@ -104,5 +104,6 @@ if (day === "11" || day === "12" || day === "13"){
   }
   return result;
 }
+
 
 friendly(["2022-09-05", "2023-09-04"]);
