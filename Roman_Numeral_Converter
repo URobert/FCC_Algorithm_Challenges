@@ -1,4 +1,33 @@
+//V2.0
+function convert(num) {
+  
+  var arrN = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+              20, 30, 40, 50, 60, 70, 80, 90, 100,
+              200, 300, 400, 500, 600, 700, 800, 900, 1000];
+  
+  var arrRoman = ["I","II","III","IV","V","VI","VII","VIII","IX","X",
+                  "XX","XXX","XL","L","LX","LXX","LXXX","XC","C",
+                  "CC","CCC","CD","D","DC","DCC","DCCC","CM","M"];
+                  
+  var convertedNumber = "";
+  var lastElemIndex = arrRoman.length-1; //index
 
+  	while(lastElemIndex >= 0){
+    	if (num - arrN[lastElemIndex] >= 0){
+    	   convertedNumber += arrRoman[lastElemIndex];
+           num = num - arrN[lastElemIndex];
+        }else{
+		  lastElemIndex--;
+        }
+	}
+    return convertedNumber;  
+ }
+
+convert(2014);
+
+
+
+/*V1.0 The way of the noob
 function convert(num) {
   
   var arrN = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
@@ -37,6 +66,6 @@ if (combos === 784){ //start this search only if number can't be obtained by a c
  return num;
 }
 
-convert(649);
+//convert(649);*/
 
 
