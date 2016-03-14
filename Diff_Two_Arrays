@@ -1,4 +1,26 @@
+// V2.0 
+
 function diff(arr1, arr2) {
+  var newArr = []; var i,j;
+	
+  checkArraysAndAddDiff(arr1,arr2,newArr);
+  checkArraysAndAddDiff(arr2,arr1,newArr);
+	
+  return newArr;
+}
+
+function checkArraysAndAddDiff (arrOne,arrTwo,result){
+	for (i=0; i < arrOne.length ;i++){
+      if (arrTwo.indexOf(arrOne[i]) === -1){
+      result.push(arrOne[i]);
+      }
+	}
+}
+diff(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]);
+
+// V1.0 The way of the noob
+
+/*function diff(arr1, arr2) {
   var newArr = [];
   
  function arrcheck (){
@@ -42,4 +64,7 @@ var check = arrcheck ();
 //diff([1, 2, 3, 5], [1, 2, 3, 4, 5]);
 //diff(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]);
 //diff(["andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]);
-diff([1, "calf", 3, "piglet"], [7, "filly"]);
+diff([1, "calf", 3, "piglet"], [7, "filly"]);*/
+
+
+
