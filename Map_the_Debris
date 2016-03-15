@@ -21,5 +21,4 @@ function orbitalPeriod(arr) {
   return arr;
 }
 
-//orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]);
 orbitalPeriod([{name: "iss", avgAlt: 413.6}, {name: "hubble", avgAlt: 556.7}, {name: "moon", avgAlt: 378632.553}]);
