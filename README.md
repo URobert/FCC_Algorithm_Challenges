@@ -8,5 +8,6 @@
 6) Paiwise  
 7) Sum All Numbers in a Range  
 8) Diff of two arrays  
-9)Roman Numeral Converter  
-10)Where art thou  
+9) Roman Numeral Converter  
+10) Where art thou  
+11) Search and replace 
