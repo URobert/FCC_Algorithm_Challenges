@@ -1,0 +1,42 @@
+//V2.0
+function myReplace (str, before, after){
+  var myArr = str.split(" ");
+  var index = myArr.indexOf(before);
+  var wordToReplace = myArr[index];
+  	
+    if (wordToReplace.charAt(0) === wordToReplace.charAt(0).toLowerCase()){
+    after = after.charAt(0).toLowerCase() + after.slice(1); //convert to LowerCase after's first letter
+    myArr[index] = after; 
+    }else{
+  	after = after.charAt(0).toUpperCase() + after.slice(1); //convert to UpperCase after's first letter
+    myArr[index] = after;
+    }
+    str = myArr.join(" ");
+    return str;
+}
+myReplace("Let us go to the store", "store", "mall");
+
+
+/*function myReplace(str, before, after) {
+  var check = str.split(" ");
+  var i,letter,okcase, converted;
+  //console.log(check);
+  for (i = 0; i< check.length; i++){
+    if (check[i] === before){
+      letter = before.charAt(0);
+      if (letter == letter.toUpperCase() ){ // upper case check
+        okcase = after.charAt(0).toUpperCase();
+        converted = after.split("");
+        converted[0] = converted[0].toUpperCase();
+        after = converted.join("");
+      }
+      check[i] = after;
+    } str = check.join(" ");
+  }
+  //console.log(str);
+ return str;
+}
+
+//myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
+myReplace("Let us get back to more Coding", "Coding", "bonfires");*/
+
