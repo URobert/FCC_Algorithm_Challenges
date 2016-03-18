@@ -1,0 +1,42 @@
+//V1.0
+function pair(str) {
+ var myGroup1 =  ["A","T"];
+ var myGroup2 =  ["C","G"];
+ var examine = str.split("");
+ var verif,i,x,matchIndex,bits,j;
+ var myArr = [];
+ var finalArr = [];
+  
+function checkAndMatch(){
+        if (matchIndex === 0){
+          myArr.push(verif);
+          myArr.push(x[1]);
+        }else{
+          myArr.push(verif);
+          myArr.push(x[0]);
+        }
+}
+
+    for (i = 0 ; i < str.length ; i++){
+      verif = examine.shift();
+      if (myGroup1.indexOf(verif) > -1){
+        matchIndex = myGroup1.indexOf(verif);
+        x = myGroup1;
+        checkAndMatch();
+      }else{
+        matchIndex = myGroup2.indexOf(verif);
+        x = myGroup2;
+        checkAndMatch();
+        
+      }
+    }
+    for (j = 0; j < str.length; j++){
+      bits = myArr.splice(0,2);
+      finalArr.push(bits);
+    }
+  console.log(finalArr);
+ str = finalArr; 
+ return str;
+}
+
+pair("GCG");
