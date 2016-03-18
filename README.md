@@ -12,3 +12,4 @@
 10) Where art thou  
 11) Search and replace  
 12) Pig latin  
+13) DNA Pairing  
