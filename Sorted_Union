@@ -1,0 +1,26 @@
+function unite(arr1, arr2, arr3) {
+  var united = [];
+  var i,j,k,howMany,arr; 
+  howMany = arguments.length;
+  for (i = 0; i < arr1.length ; i++){
+    united.push(arr1[i]);
+  }
+  
+  function checkAndAdd (arr) {
+    for (j = 0; j < arr.length ; j++){
+    if (united.indexOf(arr[j]) === -1){ //check nr not present
+      united.push(arr[j]);
+    }
+   }
+  }
+  
+  for (k = 0; k < howMany-1; k++){
+    checkAndAdd(arguments[k+1]);
+  }
+  
+  
+  //console.log(united);
+  return united;
+} // end of main function
+
+unite([1,3,2],[4,5,6],[6,7,8],[1,9,10],[25,27,30]);
