@@ -14,6 +14,5 @@ FCC Algorithm Challenge
 12) Pig latin  
 13) DNA Pairing   
 14) Missing Letters   
-<<<<<<< HEAD
 15) Boo who   
 16) Sorted Union  
