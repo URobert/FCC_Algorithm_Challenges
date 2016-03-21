@@ -14,5 +14,9 @@
 12) Pig latin  
 13) DNA Pairing   
 14) Missing Letters   
+<<<<<<< HEAD
 15) Boo who   
 16) Sorted Union 
+=======
+15) Boo who     
+>>>>>>> 6d7799f5fde9b7191cbca3244763658cbde88d8c
