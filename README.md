@@ -1,4 +1,4 @@
-#FCC Algorithm Challenge
+FCC Algorithm Challenge
 
 1) Map the Debris  
 2) Friendly Date Ranges  
@@ -16,7 +16,4 @@
 14) Missing Letters   
 <<<<<<< HEAD
 15) Boo who   
-16) Sorted Union 
-=======
-15) Boo who     
->>>>>>> 6d7799f5fde9b7191cbca3244763658cbde88d8c
+16) Sorted Union  
