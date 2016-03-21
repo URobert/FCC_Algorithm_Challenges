@@ -1,0 +1,70 @@
+// V2.0 
+
+function diff(arr1, arr2) {
+  var newArr = []; var i,j;
+	
+  checkArraysAndAddDiff(arr1,arr2,newArr);
+  checkArraysAndAddDiff(arr2,arr1,newArr);
+	
+  return newArr;
+}
+
+function checkArraysAndAddDiff (arrOne,arrTwo,result){
+	for (i=0; i < arrOne.length ;i++){
+      if (arrTwo.indexOf(arrOne[i]) === -1){
+      result.push(arrOne[i]);
+      }
+	}
+}
+diff(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]);
+
+// V1.0 The way of the noob
+
+/*function diff(arr1, arr2) {
+  var newArr = [];
+  
+ function arrcheck (){
+   
+   for (var i = 0 ; i < arr1.length ; i++){
+    for (var j = 0; j< arr2.length; j++){
+      if (arr1[i] !== arr2[j]){
+       return true;
+      }
+    }
+   }
+ } 
+  
+var check = arrcheck ();  
+ 
+  if (arr1.length === arr2.length || check === true){
+     var a = arr2.filter( function( x ) {
+     return arr1.indexOf( x ) < 0;
+     });
+     var b = arr1.filter( function( y ) {
+     return arr2.indexOf( y ) < 0;
+    });
+    newArr= newArr.concat(a,b); 
+      
+  }else{
+      if (arr1.length < arr2.length){
+        newArr = arr2.filter( function( x ) {
+        return arr1.indexOf( x ) < 0;
+       });}
+      else{
+         newArr = arr1.filter( function( y ) {
+         return arr2.indexOf( y ) < 0;
+       });
+      }
+  }   
+  console.log(newArr);
+  // Same, same; but different.
+  return newArr;
+}
+
+//diff([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+//diff(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]);
+//diff(["andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]);
+diff([1, "calf", 3, "piglet"], [7, "filly"]);*/
+
+
+

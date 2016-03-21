@@ -1,0 +1,67 @@
+//V2.0
+function translate(str) {
+  var myArr =[], i,j=0,sufix, safety;
+  var vowels = ["a","e","i","o","u","A","E","I","O","U"];
+  myArr = str.split("");
+  safety  = myArr.length; //used in case our str has only consonants
+
+  if (vowels.indexOf(myArr[0]) !== -1){
+      myArr.push("way"); 
+  }else{
+      for (i = 0 ; i < myArr.length; i++){
+              if(vowels.indexOf(myArr[i]) === -1 && j < safety){
+                sufix = myArr.shift(); //cut letter
+                myArr.push(sufix);     //end letter to the end
+                i--;
+                j++;
+              }else{
+                myArr.push("ay"); //vowel encountered
+                break;
+              }
+      }
+  }
+  str = myArr.join("");
+  return str;
+}
+translate("glove");
+
+
+
+/*V1.0
+function translate(str) {
+  var myArr =[];
+  var firstLetter,i,letter;
+  var vowels = ["a","e","i","o","u","A","E","I","O","U"];
+  var cString  = vowels.join("");
+  
+  myArr = str.split("");
+  firstLetter = myArr.shift();
+  if (cString.indexOf(firstLetter) >= 0){
+     myArr.unshift(firstLetter);
+     myArr.push("way");    
+    }else{
+       myArr.push(firstLetter);
+       //console.log(myArr);   
+       for (i = 0; i < str.length ; i++){
+         if ( cString.indexOf(myArr[0])>=0 ) {
+           break;
+        }else{
+          letter = myArr.shift();
+          // console.log(letter);
+          myArr.push(letter);
+            console.log(myArr);
+        }
+       }
+        myArr.push("ay");     
+       
+    }
+
+  str = myArr.join("");
+  console.log(str);
+  return str;
+}
+
+//translate("consonant");
+//translate("glove");
+translate("algorithm");*/
+
