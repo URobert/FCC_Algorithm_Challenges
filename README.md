@@ -15,4 +15,5 @@ FCC Algorithm Challenge
 13) DNA Pairing   
 14) Missing Letters   
 15) Boo who   
-16) Sorted Union  
+16) Sorted Union   
+17) Convert HTML Entitites
