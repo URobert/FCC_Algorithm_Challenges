@@ -1,0 +1,33 @@
+function convert(str) {
+  // &colon;&rpar;
+  var myArr = [];
+  var modStr,i;
+  
+  myArr = str.split("");
+  for (i = 0; i < myArr.length; i++){
+    if (myArr[i] === "&"){   //case might look better
+      myArr[i] = "&amp;";
+    }
+    if (myArr[i] === "<"){
+      myArr[i] = "&lt;";
+    }
+    if (myArr[i] === ">"){
+      myArr[i] = "&gt;";
+    }
+    if (myArr[i] === '"'){
+      myArr[i] = "&quot;";
+    }
+     if (myArr[i] === "'"){
+      myArr[i] = "&apos;";
+    }
+  }
+  modStr = myArr.join("");
+
+  
+  console.log(modStr);
+  return modStr;
+}
+
+convert("Dolce & Gabbana");
+//convert("Hamburgers < Pizza < Tacos");
+
