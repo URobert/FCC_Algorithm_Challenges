@@ -17,5 +17,7 @@ FCC Algorithm Challenge
 15) Boo who   
 16) Sorted Union   
 17) Convert HTML Entitites  
-18) Spinal Tap Case   
+18) Spinal Tap Case    
+19) Sum All Odd Fibonacci Numbers  
+
 
