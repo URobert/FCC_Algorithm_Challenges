@@ -1,0 +1,28 @@
+function sumFibs(num) {
+  var i,j; 
+  var sum = 0; 
+  var arr = [];
+  var a = 0, b = 1, f = 1;
+  
+  arr.push(f);
+  for (i = 2; i <= num ; i++){ //Getting the Fibonaci numbers 
+    f = a + b;
+        a = b;
+        b = f;
+    arr.push(f);
+  }
+  
+
+  for (j = 0; j < arr.length ;j++){ //Getting the final Sum
+    if (arr[j] % 2 !== 0 && arr[j] <= num){
+      sum = sum + arr[j];
+    }
+  }
+  
+  
+  console.log(sum);
+  return sum;
+}
+
+sumFibs(4);
+
