@@ -1,0 +1,33 @@
+function sumPrimes(num) {
+  var primeTest,i,m,j,sum=0;
+  var myArr = [];
+  
+  for (i = 1; i <= num ; i++){
+    myArr.push(i);
+  }
+  console.log(myArr);
+  
+  function isPrime(num) {
+   if (isNaN(num) || !isFinite(num) || num<2) {return false;} 
+   if (num%2===0) {return (num==2);}
+   if (num%3===0) {return (num==3);}
+    m = Math.sqrt(num);
+   for (var i=5;i<=m;i+=6) {
+    if (num%i===0)     {return false;}
+    if (num%(i+2)===0) {return false;}
+ }
+ return true;
+}
+
+    for (j = 0 ; j < myArr.length; j++){
+      if (isPrime(myArr[j])){
+        sum = sum + myArr[j];
+      }
+    }
+
+  console.log (sum);
+  return sum;
+}
+
+sumPrimes(10);
+
