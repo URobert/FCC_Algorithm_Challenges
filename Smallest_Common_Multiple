@@ -1,0 +1,40 @@
+function smallestCommons(arr) {
+  var sCMtest,i,k,lastNr,j = 2, correct;
+  var myA = [];
+  
+  function compareNumbers(a, b) {return a - b;}
+  arr.sort(compareNumbers); //sorting the array;
+ 
+  for (i = 1; i <= arr[1]; i++){ //getting the Array ready for check
+    myA.push(i);
+  }
+  
+  lastNr = myA[myA.length-1];
+  sCMtest = lastNr * j;
+  
+   function checkValue() {   									
+  for (k = 0; k < myA.length-1 ; k++ ){ //last nr already confirmed - no need to check
+      									//console.log(myA[k]);					
+    if (sCMtest % myA[k] === 0){
+        								//console.log("ok");
+      	correct = sCMtest;									
+    }else{
+        								//console.log("increse");
+      correct = 0;
+      j++;
+      sCMtest = lastNr * j;
+      k = 0;  							//console.log(sCMtest);
+    }   					
+  }return correct;
+      
+ } //end of function
+  
+  checkValue();
+  console.log(myA);
+  console.log(correct);
+  return correct;
+}
+
+
+smallestCommons([5,1]);
+
