@@ -19,6 +19,7 @@ FCC Algorithm Challenge
 17) Convert HTML Entitites  
 18) Spinal Tap Case    
 19) Sum All Odd Fibonacci Numbers   
-20) Sum All Primes
+20) Sum All Primes   
+21) Smallest Common Multiple
 
-
+ 
