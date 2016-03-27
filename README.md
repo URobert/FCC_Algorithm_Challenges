@@ -20,6 +20,7 @@ FCC Algorithm Challenge
 18) Spinal Tap Case    
 19) Sum All Odd Fibonacci Numbers   
 20) Sum All Primes   
-21) Smallest Common Multiple
+21) Smallest Common Multiple   
+22) Finders Keepers
 
  
