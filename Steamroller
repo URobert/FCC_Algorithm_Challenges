@@ -1,0 +1,15 @@
+function steamroller(arr) {
+  // I'm a steamroller, baby
+    var myArr = []; var i;
+    for(i = 0; i < arr.length; i++) {
+        if(Array.isArray(arr[i])) { //returns true if an obj is an array
+            myArr = myArr.concat(steamroller(arr[i]));
+        } else {
+            myArr.push(arr[i]);
+        }
+    }
+  return myArr;
+}
+
+steamroller([1, [2], [3, [[4]]]]);
+
