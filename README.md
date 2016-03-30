@@ -23,6 +23,8 @@ FCC Algorithm Challenge
 21) Smallest Common Multiple   
 22) Finders Keepers   
 23) Drop it   
-24) Steamroller
+24) Steamroller   
+25) Binary Agents   
 
+ 
  
