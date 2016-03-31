@@ -25,6 +25,7 @@ FCC Algorithm Challenge
 23) Drop it   
 24) Steamroller   
 25) Binary Agents   
+26) Everything Be True   
 
  
  
