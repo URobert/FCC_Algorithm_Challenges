@@ -1,0 +1,24 @@
+function every(collection, pre) {
+  // Is everyone being true?
+  var i,check,counter = 0;
+  
+  for (i in collection){
+    if (Boolean(collection[i][pre])){
+      counter++;
+    }
+  }
+                                       console.log(counter);
+  
+  if (collection.length === counter){
+    pre = true;
+  }else {
+    pre = false;
+  }
+  
+                                        console.log(pre);
+  return pre;
+}
+
+every([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy", "sex": "male"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex");
+
+
