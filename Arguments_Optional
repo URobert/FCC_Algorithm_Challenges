@@ -1,0 +1,27 @@
+function add() {
+  var nr, sum = arguments[0];
+
+  if (arguments.length === 1 &&
+      arguments[0] === parseInt(arguments[0], 10)){
+    
+    return function(nr) { if (typeof nr === "number") return sum + nr; };
+     }else {
+    
+    if (arguments[0] === undefined || arguments[1] === undefined ){
+        return undefined;  
+
+        }else{  
+          if (arguments[0] === parseInt(arguments[0], 10) &&
+              arguments[1] === parseInt(arguments[1], 10) ){
+              sum = sum + arguments[1];
+              return sum;
+           }
+
+        }
+     }// end of top else
+
+}
+
+
+//add(2,3);
+add(2)([3]);
