@@ -1,0 +1,21 @@
+function rot13(str) { // LBH QVQ VG!
+  var alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+  var alphabetx2 = alphabet.concat(alphabet);
+  var stringSplit = str.split("");
+  var letterIndex  = 0;
+  
+  for (var i = 0; i < stringSplit.length; i++){
+    if (stringSplit[i] !== "." && stringSplit[i] !== " " && stringSplit[i] !== "?" && stringSplit[i] !== "!"){
+       letterIndex  = alphabet.indexOf(stringSplit[i]);
+       stringSplit[i] = alphabetx2[letterIndex+13];
+    }
+  }
+  str = stringSplit.join("");
+  console.log(str);
+  
+  return str;
+}
+
+// Change the inputs below to test
+rot13("SERR PBQR PNZC");
+
