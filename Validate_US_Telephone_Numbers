@@ -1,0 +1,34 @@
+function telephoneCheck(str) {
+  
+  var validLength = [7,10,11]; //correct nr lengths after removing non-numerical chars
+  var splitStr = str.split("");
+  
+  if (str.indexOf(")") !== -1 && str.indexOf("(") === -1 ||
+      str.indexOf("(") !== -1 && str.indexOf(")") === -1){
+    //console.log("fail");
+    return false; // if parenthesis exist, they most be both opening and closing
+  }
+
+  str = str.replace(/\D/g,''); // removing all non-numeric characters
+  
+  if (splitStr[0] == 1 && splitStr[1] == " "){ // check if country code is present and  == 1
+      if (validLength.indexOf(str.length) !== -1){ //see if the length of the nr is correct
+        return true;
+      }else{
+        return false;
+      }
+  }else{  // when country code is not present, nr length is correct and it begins with 5
+      if ((splitStr[1] !== " " && 
+          validLength.indexOf(str.length) !== -1 && splitStr[0] == 5) || 
+          splitStr[0] == 1 && splitStr[1] == "(" || splitStr[0] == "(" && splitStr[1] == 5){
+        // last line is an exception to pass the unique "1(" && "5(" combinations
+        return true;      
+      }
+    return false;
+  }
+
+
+}
+
+telephoneCheck("(555)555-5555");
+
