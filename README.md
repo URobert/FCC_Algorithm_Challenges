@@ -28,6 +28,8 @@ FCC Algorithm Challenge
 26) Everything Be True   
 27) Arguments Optional   
 28) Caesars Cipher   
+29) Validate US Telephone Numbers   
+
 
 
 
