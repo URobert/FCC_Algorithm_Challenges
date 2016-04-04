@@ -1,0 +1,44 @@
+function sym(args) {
+  var firstSet=[], nextSet = [], tempResult =[], finalResult = [];
+  var argumentsCheck = 2; var resultwithUniques=[];
+  
+    tempResult = setSymDiff(arguments[0], arguments[1]); //save for later 
+  
+  // Adding the part for multiple arguments within the array
+  while (argumentsCheck < arguments.length){
+    firstSet = tempResult;
+    nextSet = arguments[argumentsCheck]; //which started at 2 and is now reping the 3rd argument
+    tempResult = setSymDiff(firstSet, nextSet);
+    argumentsCheck++;
+  }
+  
+   for  (var u in tempResult){
+        if(resultwithUniques.indexOf(tempResult[u]) === -1){
+            resultwithUniques.push(tempResult[u]);
+        }
+    }
+  
+  
+  return resultwithUniques; 
+}
+  
+function setSymDiff (a,b){
+ 	 var symmetric_difference = [];
+	 var i,j;
+   
+    for (i=0; i< a.length; i++){
+      if (b.indexOf(a[i])===-1){
+        symmetric_difference.push(a[i]);
+      }
+    }
+    for (j=0; j < b.length; j++){
+      if (a.indexOf(b[j]) === -1){
+        symmetric_difference.push(b[j]);
+      }
+    }
+    return symmetric_difference; //function returns symmetric difference of two arrays
+  }
+
+sym([1, 2, 3], [5, 2, 1, 4]);
+
+
